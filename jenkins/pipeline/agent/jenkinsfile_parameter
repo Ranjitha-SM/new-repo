@@ -35,6 +35,10 @@ stage('DEPLOY'){
 else if (${ENV_NAME}=='PROD'{
           echo " deploying to PROD environment"      
 }
+else {
+        echo "no such environment"
+
+}
 }
 
 }
