@@ -28,11 +28,18 @@ stage('TEST'){
 
 stage('DEPLOY'){
     steps{
-     sh '''
-        sleep 5
-        '''
+     script{
+            if (${ENV_NAME}=='TEST'){
+                echo "deploying to TEST environment"
+                }
+else if (${ENV_NAME}=='PROD'{
+          echo " deploying to PROD environment"      
+}
+}
+
+}
          }
-              }
+              
 }
 }
 
