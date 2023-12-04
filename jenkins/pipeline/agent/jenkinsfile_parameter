@@ -29,10 +29,10 @@ stage('TEST'){
 stage('DEPLOY'){
     steps{
      script{
-            if (${ENV_NAME}=='TEST'){
+            if (${params.ENV_NAME}=='TEST'){
                 echo "deploying to TEST environment"
                 }
-else if (${ENV_NAME}=='PROD'{
+else if (${params.ENV_NAME}=='PROD'{
           echo " deploying to PROD environment"      
 }
 else {
