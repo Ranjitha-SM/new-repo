@@ -1,0 +1,38 @@
+pipeline{
+agent any
+    parameters{
+      string name : 'ENV_NAME'
+      default value : 'TEST'
+      description :'input the environment to deploy'
+
+      choice name : 'VERSION'
+      choices : ['1.0', '2.0', '3.0', '4.1']
+      description : 'enter the version to build to deploy'
+}
+stages{
+  stage('BUILD'){
+     steps{
+      sh '''
+        sleep 5
+        '''
+          }
+}
+stage('TEST'){
+     steps{
+      sh '''
+        sleep 5
+        '''
+          }
+
+              }
+
+stage('DEPLOY'){
+    steps{
+     sh '''
+        sleep 5
+        '''
+         }
+              }
+}
+}
+
