@@ -1,0 +1,34 @@
+pipeline{
+agent any
+stages{
+      stage('BUILD'){
+            steps{
+                  sh '''
+                  #! /bin/bash
+                  pwd
+                  ls -lrt
+                  sleep 5
+                  '''
+            } 
+            stage(TEST'){
+            steps{
+                  sh '''
+                  #! /bin/bash
+                  pwd
+                  ls -lrt
+                  sleep 5
+                  '''
+            } 
+            stage('DEPLOY'){
+            steps{
+                  sh '''
+                  #! /bin/bash
+                  pwd
+                  ls -lrt
+                  sleep 5
+                  '''
+                  }
+            
+      }
+      }
+        } 
