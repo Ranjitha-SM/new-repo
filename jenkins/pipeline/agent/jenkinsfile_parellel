@@ -1,0 +1,38 @@
+pipeline{
+agent {label 'slave1'}
+stages{
+  stage('BUILD'){
+     steps{
+      sh '''
+        sleep 5
+        '''
+          }
+              }
+stage('TEST_ALL'){
+parellel {
+stage('TEST_WINDOWS'){
+    steps{
+      sh '''
+        sleep 5
+        '''
+         }
+stage('TEST_LINUX'){
+    steps{
+      sh '''
+        sleep 5
+        '''
+         }
+
+            }
+}
+}
+stage('DEPLOY'){
+    steps{
+     sh '''
+        sleep 5
+        '''
+         }
+              }
+}
+}
+}
